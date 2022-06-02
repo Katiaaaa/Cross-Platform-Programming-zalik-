@@ -12,12 +12,12 @@ const validationSchema = yup.object({
     x1_numerator: yup.number()
     .required("Обов'язкове поле"),
     x1_denominator: yup.number()
-    .positive( 'Ви вийшли за мінімальне значення')
+    .min(1, 'Значення має бути додатнім')
     .required("Обов'язкове поле"),
     x2_numerator: yup.number()
     .required("Обов'язкове поле"),
     x2_denominator: yup.number()
-    .positive( 'Ви вийшли за мінімальне значення')
+    .min(1, 'Значення має бути додатнім')
     .required("Обов'язкове поле"),
     
 })
